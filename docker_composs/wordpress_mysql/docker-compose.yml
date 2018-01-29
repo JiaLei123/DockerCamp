@@ -1,0 +1,17 @@
+wordpress:
+  image: wordpress
+  links:
+  - mysql
+  ports:
+  - "80:80"
+mysql:
+  image: mysql
+  volumes:
+  - /home/lei_jia/mysql:/var/lib/mysql
+  environment:
+  - MYSQL_ROOT_PASSWORD=wordpressdocker
+  - MYSQL_DATABASE=wordpress
+  - MYSQL_USER=wordpress
+  - MYSQL_PASSWORD=wordpresspwd
+
+
